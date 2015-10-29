@@ -70,7 +70,4 @@ Lita.configure do |config|
   config.robot.locale = "fr"
   config.robot.name = "Synarchy"
   config.robot.alias = "!"
-  config.handlers.youtube_me.api_key = YOUTUBE_API_KEY
-  config.handlers.google.safe_search = :off
-  config.handlers.google_images.safe_search = :off
 end

@@ -16,6 +16,4 @@ gem "lita-slack"
 # For example:
 # gem "lita-google-images"
 # gem "lita-karma"
-gem "lita-google"
-gem "lita-google-images"
-gem "lita-youtube-me"
+gem "lita-google_search"
