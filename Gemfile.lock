@@ -12,6 +12,7 @@ GEM
       websocket-driver (>= 0.5.1)
     google-search (1.0.3)
       json
+    htmlentities (4.3.4)
     http_router (0.11.2)
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
@@ -42,6 +43,9 @@ GEM
       faye-websocket (>= 0.8.0)
       lita (>= 4.6.0)
       multi_json
+    lita-spoil_french (0.1.0)
+      htmlentities
+      lita (>= 4.6)
     multi_json (1.11.2)
     multipart-post (2.0.0)
     puma (2.14.0)
@@ -67,3 +71,4 @@ DEPENDENCIES
   lita-google_search
   lita-irc
   lita-slack
+  lita-spoil_french
