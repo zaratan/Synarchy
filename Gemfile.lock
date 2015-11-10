@@ -47,12 +47,12 @@ GEM
     lita-spoil_french (0.1.0)
       htmlentities
       lita (>= 4.6)
-    lita-tell_on_wake (0.1.0)
+    lita-tell_on_wake (0.1.1)
       lita (>= 4.6)
       redis-objects
     multi_json (1.11.2)
     multipart-post (2.0.0)
-    puma (2.14.0)
+    puma (2.15.3)
     rack (1.6.4)
     rb-readline (0.5.3)
     redis (3.2.1)
