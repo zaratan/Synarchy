@@ -38,6 +38,8 @@ GEM
     lita-irc (2.0.3)
       cinch (>= 2.0)
       lita (>= 4.0)
+    lita-love (0.1.0)
+      lita (>= 4.6)
     lita-slack (1.7.0)
       eventmachine
       faraday
@@ -76,6 +78,7 @@ DEPENDENCIES
   lita
   lita-google_search
   lita-irc
+  lita-love
   lita-slack
   lita-spoil_french
   lita-tell_on_wake
