@@ -38,7 +38,7 @@ GEM
     lita-irc (2.0.3)
       cinch (>= 2.0)
       lita (>= 4.0)
-    lita-love (0.1.1)
+    lita-love (0.1.2)
       lita (>= 4.6)
     lita-slack (1.7.0)
       eventmachine
