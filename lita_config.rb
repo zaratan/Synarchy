@@ -4,39 +4,42 @@ require_relative "token.rb"
 Lita.configure do |config|
   # The name your robot will use.
 
-      config.adapters.irc.server = "irc.iiens.net"
-      config.adapters.irc.channels = ["#zaratan"]
-      config.adapters.slack.token = SLACK_TOKEN 
-      config.adapters.irc.user = "Synarchy"
-      config.adapters.irc.realname = "Clara"
-      config.adapters.irc.log_level = :log
-      config.adapters.irc.cinch = lambda do |cinch_config|
-        cinch_config.plugins.plugins = [Cinch::Plugins::Identify]
-        cinch_config.plugins.options[Cinch::Plugins::Identify] = {
-          :password => CINCH_PASSWORD,
-          :type     => :nickserv,
-        }
-      end
+  config.adapters.irc.server = "irc.iiens.net"
+  config.adapters.irc.channels = ["#zaratan"]
+  config.adapters.slack.token = SLACK_TOKEN 
+  config.adapters.irc.user = "Synarchy"
+  config.adapters.irc.realname = "Clara"
+  config.adapters.irc.log_level = :log
+  config.adapters.irc.cinch = lambda do |cinch_config|
+    cinch_config.plugins.plugins = [Cinch::Plugins::Identify]
+    cinch_config.plugins.options[Cinch::Plugins::Identify] = {
+      :password => CINCH_PASSWORD,
+      :type     => :nickserv,
+    }
+  end
 
   case ENV["to"]
-    when "IIENS"
-      Lita.const_set('REDIS_NAMESPACE', "lita_iiens")
-      config.http.port = 11111
-      config.robot.admins = IIENS_ROBOT_ADMIN
-      config.robot.adapter = :irc
-      config.adapters.irc.server = "irc.iiens.net"
-      config.adapters.irc.channels = ["#zaratan", "#skelz0r"]
-    when "RIZON"
-      Lita.const_set('REDIS_NAMESPACE', "lita_rizon")
-      config.http.port = 11112
-      config.robot.adapter = :irc
-      config.robot.admins = RIZON_ROBOT_ADMIN
-      config.adapters.irc.server = "irc.rizon.net"
-      config.adapters.irc.channels = ["#zaratan", "#computer", "#linael", "#storytime"]
-    when "SLACK"
-      Lita.const_set('REDIS_NAMESPACE', "lita_slack")
-      config.http.port = 11113
-      config.robot.adapter = :slack
+  when "IIENS"
+    config.robot.locale = "fr"
+    Lita.const_set('REDIS_NAMESPACE', "lita_iiens")
+    config.http.port = 11111
+    config.robot.admins = IIENS_ROBOT_ADMIN
+    config.robot.adapter = :irc
+    config.adapters.irc.server = "irc.iiens.net"
+    config.adapters.irc.channels = ["#zaratan", "#skelz0r"]
+  when "RIZON"
+    config.robot.locale = "fr"
+    Lita.const_set('REDIS_NAMESPACE', "lita_rizon")
+    config.http.port = 11112
+    config.robot.adapter = :irc
+    config.robot.admins = RIZON_ROBOT_ADMIN
+    config.adapters.irc.server = "irc.rizon.net"
+    config.adapters.irc.channels = ["#zaratan", "#computer", "#linael", "#storytime"]
+  when "SLACK"
+    config.robot.locale = "fr"
+    Lita.const_set('REDIS_NAMESPACE', "lita_slack")
+    config.http.port = 11113
+    config.robot.adapter = :slack
   end
 
 
