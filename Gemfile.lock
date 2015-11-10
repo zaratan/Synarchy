@@ -47,7 +47,7 @@ GEM
     lita-spoil_french (0.1.0)
       htmlentities
       lita (>= 4.6)
-    lita-tell_on_wake (0.1.2)
+    lita-tell_on_wake (0.1.4)
       lita (>= 4.6)
       redis-objects
     multi_json (1.11.2)
